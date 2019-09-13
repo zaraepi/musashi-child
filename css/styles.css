@@ -1,0 +1,473 @@
+/* global */
+* {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    border: none;
+}
+
+@font-face {
+    font-family: "CircularStd";
+    src: url("../fonts/Circular/CircularStd-Book.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "NeutrafaceDisplay-Light";
+    src: url("../fonts/neutradisp-light.otf");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gordita";
+    src: url("../fonts/Gordita.ttf");
+    /* src: url("../fonts/Gordita.woff"); */
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*All devices and mobile phone*/
+body {
+     /* background:  linear-gradient(180deg,white 0%, #FFC0CB 40%, white 75%); */
+       /* background:  linear-gradient(180deg,white 0%, grey 40%, white 75%); */
+    /* font-family: "CircularStd"; */
+    font-family: 'CircularStd';
+    /* background: linear-gradient(180deg,white 0%, #fff6f8 40%, white 75%); */
+    background: linear-gradient(180deg,white 0%, #ffe1e7 40%, white 75%);
+}
+
+.section1 {
+    /* outline: thin red solid; */
+    width: 100%;
+    margin: auto;
+    /* outline: thin blue solid;     */
+    /* position: relative; */
+    /* height: 100%; */
+    height: 100vh;
+    /* padding-bottom: 5em; */
+
+}
+
+.background-img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.bg-main {
+    width: 100%;
+    /* outline: thin red solid; */
+    /* margin-top: 5em; */
+}
+
+.p-img-mobile {
+    top: 0;
+    width: 90%;
+    margin: auto;
+    /* outline: thin blue solid; */
+    left: 0;
+
+    font-family: ivymode;
+    font-size: 3em;
+    font-weight: 800;
+    text-align: center;
+    margin-top: -1.3em;
+}
+
+.button-container{
+    width: 90%;
+    margin: auto;
+    /* outline: thin green solid; */
+}
+
+.menu-btn{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    height: 3em;
+    margin-top: 3em;
+    background: black;
+    color: white;
+    font-family: 'Gordita';
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.p-img-desktop {
+    display: none;
+}
+
+
+
+.mobile-nav{
+    /* display: flex; */
+}
+
+#open-nav {
+    height: 100vh;
+    background:black;
+    top: 0;
+    position: absolute;
+    width: 80%;
+    left: -80%;
+   /*  width: 15em; */
+    /* left:  -15em; */
+    /* opacity: 0.5; */
+    /* z-index: 10; */
+    position: fixed;
+    z-index: 30;
+    transition: all ease 1.5s;
+}
+
+
+#open-nav.open {
+    left: 0em;
+    transition: all ease 1.5s;
+}
+/*  */
+/* #open-nav.vh{
+    height: 100vh;
+    position: fixed;
+
+}
+
+.hamburger.vh{
+    height:100vh;
+     position: fixed;
+     z-index: 2000;
+}
+
+#nav-icon-line.vh{
+    height: 100vh;
+    z-index: 100;
+     position: fixed;
+} */
+/*  */
+
+#open-nav.active {
+    border-bottom: 0.1em #00c666 solid;
+    line-height: 2em;
+    transition: all ease 1.5s;
+}
+
+.text-logo{
+    font-size: 1.5em;
+    font-family: ivymode;
+    font-weight: 800;
+    padding-top: 1.1em;
+    position: absolute;
+}
+
+
+.hamburger{
+   
+   /*  outline: thin green solid;
+    width: 90%;
+    margin: auto;
+    height: 70px; */
+
+    width: 90%;
+    transition: all ease 1s;
+    margin: auto;
+    position: relative;
+    /* height: 4.5em; */
+    height: 70px;
+    /* outline: thin red solid; */
+}
+
+.hamburger.fixed {
+    position: fixed;
+    z-index: 120;
+    background-color: rgba(0, 0, 0, 0.90);
+    margin: auto;
+    width: 100%;
+
+    height:  55px;
+
+}
+
+#nav-icon-line {
+    width: 2.5em;
+    height: 2em;
+    transform: rotate(0deg);
+    transition: .5s ease-in-out;
+    cursor: pointer;
+    margin-top: 1.4em;
+    left: 84%;
+    position: fixed;
+    margin-top: 1.5em;
+    /* z-index: 50; */
+}
+
+
+#nav-icon-line.fixed{
+    width: 2em;
+    height: 1.5em;
+    /* margin-top: 1.2em; */
+}
+
+#nav-icon-line.fixed{
+    margin-top: 1em;
+
+}
+
+#nav-icon-line.fixed.open{
+    margin-top: 0.5em;
+    /* z-index: 50; */
+
+}
+
+#nav-icon-line.fixed span:nth-child(2) {
+    top: 0.6em;
+}
+
+#nav-icon-line.fixed span:nth-child(3) {
+    top: 1.2em
+}
+
+
+#nav-icon-line span.fixed{
+    background: white;
+}
+
+#nav-icon-line span {
+    display: block;
+    position: absolute;
+    height: 0.1em;
+    width: 100%;
+    background: black;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: .9s ease-in-out;
+}
+
+#nav-icon-line span:nth-child(1) {
+    top: 0px;
+
+}
+
+#nav-icon-line span:nth-child(2){
+    top: 0.8em;
+}
+
+#nav-icon-line span:nth-child(3) {
+    top: 1.6em;
+}
+
+
+#nav-icon-line.open span:nth-child(1) {
+    top: 18px;
+    transform: rotate(135deg);
+}
+
+#nav-icon-line.open span:nth-child(2) {
+    opacity: 0;
+    left: -60px;
+}
+
+#nav-icon-line.open span:nth-child(3) {
+    top: 18px;
+    transform: rotate(-135deg);
+}
+
+
+
+
+
+
+.menu-close-btn:hover {
+    transform: rotate(180deg);
+}
+
+.menu-close-btn:before {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    transform: rotate(45deg);
+    transform-origin: center;
+}
+
+.menu-close-btn:after {
+    content: "";
+    position: absolute;
+    display: block;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 32px;
+    height: 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.5);
+    transform: rotate(-45deg);
+    transform-origin: center;
+}
+
+.menu-close-btn.show {
+    margin-left: 75%;
+    margin-top: 2.5em;
+    z-index: 20;
+    position: absolute;
+    color: black;
+    display: block;
+    width: 32px;
+    height: 32px;
+    /* transition: transform .25s ease-in-out; */
+    transition: transform .9s all ease;
+}
+
+.menu-close-btn {
+    display: none;
+}
+
+/* .menu-close-btn.fixed {
+    height: 100vh;
+    z-index: 100;
+    position: fixed;
+} */
+
+.menu-ul {
+
+    margin-top: 10em;
+}
+
+.menu-ul li {
+    display: block;
+}
+
+.menu-item {
+    line-height: 3em;
+    text-align: center;
+    font-family: "CircularStd";
+    font-size: 1.28em;
+}
+
+.menu-item a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+    line-height: 3em;
+
+    font-size: 28px;
+    font-family: 'Gordita';
+    font-weight: 500;
+    font-style: bold;
+}
+
+.menu-item a {
+    background-color: rgba(0, 0, 0, 0);
+    color: #fff;
+   /*  font-weight: 300;
+    font-size: 1.2em; */
+}
+
+.menu-item a:hover, .menu-item a:active, .menu-item a:focus {
+    background-color: rgba(0, 0, 0, 0);
+    color: #00c666;
+    transition: all ease 1s;
+    /* border-bottom: 2em thin red solid; */
+}
+
+/* .menu-item a:hover{
+    border-bottom:  1px red solid;
+}
+ */
+
+.desktop-nav {
+    display: none;
+}
+
+.section2{
+    /* background: pink; */
+    /* height: 850px; */
+
+    border-top: 1px pink solid;
+}
+
+.p-fade-up{
+    width: 90%;
+    margin: auto;
+    /* outline: thin pink solid; */
+   /*  margin-top: 20em;
+    position: absolute; */
+    
+}
+
+.p-fade-up-s-2{
+    font-family: 'Gordita';
+    font-weight: 500;
+    font-size: 22px;
+    padding-top: 5em;
+    line-height: 2em;
+    text-align: left;
+   
+  
+}
+
+.bg-main-2{
+    margin-top: 5em;
+}
+
+.bg-main-3, .bg-main-2{
+    background-size: cover;
+    /* outline: thin red solid; */
+    width: 100%;
+    background-repeat: no-repeat;
+}
+
+/*for small tablet - inclusive*/
+@media only screen and (min-width:40em) {
+    body:before {
+        content: 'tablet';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+    }
+
+}
+
+/*for small tablet - exclusive - use with care*/
+@media only screen and (min-width:40em) and (max-width:59.99999em) {
+}
+
+/*for tablet - inclusive*/
+@media only screen and (min-width:60em) {
+    body:before {
+        content: 'laptop';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+        z-index: 1000;
+    }
+
+}
+
+/*for desktop - inclusive*/
+@media only screen and (min-width:80em) {
+    body:before {
+        content: 'desktop';
+        background-color: rgba(0, 0, 0, 0.2);
+        position: fixed;
+        padding: 0.5em;
+        right: 0;
+        top: 0;
+    }
+
+}
